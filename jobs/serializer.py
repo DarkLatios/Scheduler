@@ -5,7 +5,7 @@ from .models import Hall,Condition
 class ConditionSerializer(serializers.ModelSerializer):
     class Meta:
         model=Condition
-        fields=['day','time','status']
+        fields=['day','time','status','mems']
 
 
 

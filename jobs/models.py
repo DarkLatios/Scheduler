@@ -14,6 +14,7 @@ class Condition(models.Model):
     day=models.DateField(auto_now_add=False)
     time = models.TimeField(auto_now_add=False)
     status=models.CharField(max_length=200,default="available")
+    mems=models.IntegerField(default=0)
 
 
     def __str__(self):
