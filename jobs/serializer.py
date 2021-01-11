@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Hall,Condition
+from .models import Hall,Condition,Img
 
 
 class ConditionSerializer(serializers.ModelSerializer):
@@ -15,3 +15,9 @@ class HallSerializer(serializers.ModelSerializer):
     class Meta:
         model=Hall
         fields=['name','maxcapacity','vacancy','condition']
+
+
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Img
+        fields=['title','image']
