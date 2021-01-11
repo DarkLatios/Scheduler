@@ -1,9 +1,22 @@
 from django.db import models
+import json
+from django_mysql.models import ListCharField
 
 class Hall(models.Model):      #For Every Hall I have its Condition/Status.
     name=models.CharField(max_length=200,primary_key = True,blank=False)
     maxcapacity=models.IntegerField()
     vacancy=models.IntegerField()
+    floors=ListCharField(
+        base_field=models.CharField(max_length=10),
+        size=6,
+        max_length=(6 * 11)
+    )
+
+    # def set_foo(self, x):
+    #     self.floors = json.dumps(x)
+
+    # def get_foo(self):
+    #     return json.loads(self.floors)
 
     def __str__(self):
         return self.name
