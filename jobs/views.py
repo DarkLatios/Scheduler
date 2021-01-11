@@ -29,6 +29,25 @@ class HallList(APIView):
         # data=response.json()
         # print(data['vehicles'])
         return Response(None)
+    
+
+
+    # def put(self, request, pk, format=None):
+    #     snippet = self.get_object(pk)
+    #     print("snippet-->",snippet)
+    #     serializer = CruxSerializer(snippet, data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    # def get(self,request,pk):
+    #     print("helloss",pk)
+    #     crux=Crux.objects.filter(firstName=str(pk))
+    #     print("crux",crux)
+    #     serializer=CruxSerializer(crux,many=True)
+    #     print("hello",serializer.data)
+    #     return Response(serializer.data,status=status.HTTP_201_CREATED)
 
 class Images(APIView):
     def get(self,request):
